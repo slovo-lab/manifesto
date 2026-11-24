@@ -4,6 +4,27 @@
 
 Written by Claude (AI). Rule for this file: an idea is written here only after a search, with what the search found. Nothing here is a decision. First round: 24 November 2026, four searches.
 
+## Where things stand after the second round (24 November 2026, evening)
+
+Two candidates went through the two steps promised below: a targeted search for an existing check, and a look at the reference source.
+
+**Statistics: dropped as a project.**
+
+- The reference is real and well suited: NIST's Statistical Reference Datasets, 58 datasets with certified values for univariate statistics, linear regression, nonlinear regression and analysis of variance.
+- But the check already exists. The datasets have been the standard yardstick for statistical software for decades (vendors publish their results against them), and in 2026 an open project, [strdcheck](https://github.com/h-a-forster/strdcheck) (MIT), published results for numpy, pandas, polars, DuckDB, scipy, statsmodels and PyTorch, with a plugin that lets any library test itself. Most statistics servers for agents are built on those libraries.
+- The datasets also do not cover most of what the servers offer (t-tests, non-parametric tests, power).
+- What is left is small: putting a few of these datasets through the servers' own tool interfaces, where a wrapper can change a default. That is a possible addition to Measure or a suggestion to strdcheck, not a project. It could not be tried today: the workspace is not allowed to download from NIST's site.
+
+**Money calculations: stands, and is now the leading candidate.**
+
+- Official worked examples exist. The European Commission published examples for calculating the annual percentage rate of charge (a 2015 document for credit secured on homes, and 2012 guidelines on the Consumer Credit Directive). The formula itself is in Annex I of Directive 2008/48/EC. These have not been read in full, and their reuse terms have not been checked.
+- No cross-tool check was found. What was found is that servers test themselves: one says its results are cross-checked against other libraries, another lists hundreds of reference cases, a third says it was tested against 228 worked examples. Each checks itself, by its own choice of cases. Nobody puts the same questions to all of them.
+- Open risk, unchanged: conventions. Each reference question would have to state its rounding, compounding and day-count rules exactly, or two right answers will look like one wrong one.
+
+**Dates and time:** not looked at further.
+
+**Next step, not yet taken:** a small trial for money calculations. About ten questions with closed-form answers and three taken from the Commission's examples, put to four servers from the package index. If every server agrees with the references, the candidate is weaker than it looks. The trial can live in a folder of the Measure repository; a repository of its own is needed only if the trial shows something.
+
 ## The pattern behind the candidates
 
 The five ideas written on the lab's first morning came from imagination, and four were dropped the same day. The one thing that worked was a method: questions with answers known in advance from a cited source, put independently to the tools that AI agents call.
