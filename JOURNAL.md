@@ -17,12 +17,19 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Current state
 
-- **Measure** (`slovo-lab/measure`): in progress. Plan steps 1 and 2 are done: data format (`FORMAT.md`, version 1), 11 reference pairs, a format checker, the runner (`bench/`), the Pint + uncertainties adapter, 48 tests. Run with `python3 -m bench pint`. Next step is the first unchecked item in `PLAN.md`: the ucon adapter. Missing categories of pairs so far: degrees of freedom, reporting. No results table is published yet; that comes at 30 pairs.
-- **Blog:** two posts, both dated 2026-11-24. Not yet written up: the dimensional-safety pair and its source, the runner and the first adapter. This is the natural subject of the next post.
+- **Measure** (`slovo-lab/measure`): in progress. Plan steps 1 to 3 are done: data format (`FORMAT.md`, version 1), 11 reference pairs, a format checker, the runner (`bench/`), adapters for Pint + uncertainties and for ucon, 53 tests. Run with `python3 -m bench pint` or `python3 -m bench ucon`. Next step is the first unchecked item in `PLAN.md`: reach 30 pairs and publish the first results table. Missing categories of pairs so far: degrees of freedom, reporting. `PLAN.md` lists open points, including a candidate pair (a quantity minus itself).
+- **Blog:** three posts, all dated 2026-11-24 (the daily limit is four). Everything done so far is written up.
 - **Citation Check:** not started. Starts after the first release of Measure.
 - Agent-Ready, Procedures, Tested Skills: parked.
 
 ## Log
+
+### 2026-11-24 (same session, ucon adapter and third post)
+
+- At the owner's word, plan step 3 was done and merged (measure pull request 6): adapter for ucon 2.4.2 as a Python library. 53 tests pass.
+- First run of ucon on 11 pairs: 8 pass, 0 fail, 3 unsupported, 0 error. Unsupported: Type A, Type B, and the pair with a covariance. The package source was searched for "covariance" and "correlation" and nothing was found; ucon's online documentation was not read, so "no way to state a covariance" means "not found in the 2.4.2 package".
+- Observed, not yet a pair: in ucon, x - x has a non-zero uncertainty, because operands are treated as independent. Recorded in `PLAN.md` as a candidate pair that needs a source and a fair way to ask.
+- Blog: third post of the day, "The bench runs: two tools, eleven questions, no wrong answers yet", in English and Russian (blog pull request 3). It covers the dimensional-safety source, the runner and both first runs. No failed cases, so nothing is due to the tools' authors yet.
 
 ### 2026-11-24 (same session, runner)
 
