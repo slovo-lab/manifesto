@@ -20,10 +20,20 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 - **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026; the owner created the tag `v0.1.0` and the GitHub release the same day. The tag has 33 reference pairs; main has 43 after ten more were added. Also on main: runner, adapters for Pint + uncertainties and ucon, `tools/make_results.py`, `RESULTS.md`, 64 tests. Results on 43 pairs: Pint 0.26.2 + uncertainties 3.2.3 passed 32 of 32 pairs it has a function for; ucon 2.4.2 passed 27 of 28. The two findings were reported to ucon's authors (issues 395 and 396). Next steps are the unchecked items in `PLAN.md`: automatic test runs, adapters for agent-facing servers.
 - **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date. Not yet written up: the ten pairs added after the release (degrees of freedom, rounding, temperature differences, Type B for a normal distribution). A subject for the next post.
-- **Second project:** **CLAIMED at 15:15 Madrid time on 24 November by the afternoon session with the owner: it is doing the prior-art search and will write the result here. Other sessions: do not start this until this note is replaced.** Citation Check as a new citation checker is dropped under rule 5 (see the log). Open question for the next session: does an independent, cross-tool test of citation checkers against references with known answers already exist? If not, write the project statement for it (it needs a new repository from the owner). If it does, take the next idea from the parked list and run the same prior-art search first.
-- Agent-Ready, Procedures, Tested Skills: parked.
+- **Second project: none for now (decided 24 November 2026).** Four of the five ideas on the original list turned out to be crowded fields; see the log. The lab's effort stays on Measure, whose main promise, testing the servers that AI agents actually call, is not delivered yet. The one remaining candidate is Procedures (sourced, dated step-by-step guides to public procedures). It needs a careful prior-art study and a view on the risk of wrong guidance before any decision; one search on 24 November found servers that expose Spanish open data (BOE, INE, datos.gob.es) but nothing that publishes procedures as checked steps. Do that study in a later session, not as a side task.
+- **CLAIMED at 15:25 Madrid time on 24 November by the afternoon session with the owner: the PLAN.md step "adapters for tools that run as servers for AI agents" in `measure`. Other sessions: do not start it until this note is replaced.**
+- Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (afternoon, second project: prior-art searches and decision)
+
+- Question from the earlier entry: does an independent cross-tool test of citation checkers exist? Yes, several. HALLMARK (https://github.com/rpatrik96/hallmark, MIT) is a benchmark for citation hallucination detection tools; a Zenodo dataset compares CheckIfExist, HalluCiteChecker, Hallucinator, HalRef and RefChecker on manually verified references; CiteAudit and CiteCheck come with their own benchmarks. A test bench for citation checkers would be a duplicate. Dropped.
+- Agent-Ready (audit of how usable a website is for AI agents): crowded. Cloudflare publishes an Agent Readiness score; open-source tools include agent-readiness-cli, agent-lint and AgentReady, and there are several hosted checkers. Dropped.
+- Tested Skills (instructions for agents, each with tests): crowded. SkillsBench, OpenSkillEval, SkillAudit and SWE-Skills-Bench evaluate skills, and eval-tested skill collections exist. Dropped.
+- Procedures: one search only. Found servers for Spanish open data, nothing that publishes procedures as checked steps. Not enough to decide either way.
+- Decision: no second project now. Starting one only to have two would go against rules 4 and 5. Measure found two real defects on its first day and has not yet tested a single server that agents call, which is what it was started for. Work continues there.
+- Lesson for the manifesto's project list: all five ideas were written before any search. Four did not survive a ten-minute search. Ideas go on the list only after the search from now on.
 
 ### 2026-11-24 (afternoon, ISO citation settled)
 
