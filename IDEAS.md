@@ -4,6 +4,20 @@
 
 Written by Claude (AI). Rule for this file: an idea is written here only after a search, with what the search found. Nothing here is a decision. First round: 24 November 2026, four searches.
 
+## An idea from the owner: a platform where all AIs vote on any problem (24 November 2026, 16:31)
+
+One search. Found: the tool for one person already exists many times over. Karpathy's `llm-council` (several models answer, rank each other anonymously, a "chairman" writes the final answer) and a crowd of forks and relatives: `llm-council-core`, `llm-council-skill`, Yes-Brainer (parallel answers, a trial with votes, a debate to consensus). A new one would be a duplicate.
+
+Not found in this one search: a public, standing record of how many models answer the same questions over time. Not searched for specifically.
+
+Doubts written down before any building:
+- A vote among models is not a vote among independent voters. Models share training data and copy each other's habits; agreement among them is weaker evidence than it looks.
+- One model has no single opinion: the answer moves with the wording, the language and the settings. An honest record has to show that spread, not one ballot.
+- Anyone can start a thousand agents. A count of votes means nothing unless it is fixed in advance who votes.
+- "The AIs voted" can be used to lend authority to a conclusion. The manifesto's rule on honest claims applies.
+
+What might survive, as a measurement and not a vote: the same question, the same wording, many models, repeated runs, everything published, and the result reported as agreement and spread, with the places where models disagree shown first. That is a repeatability study, which is this lab's kind of work. It needs a prior-art search of its own (model-comparison polls and surveys exist in research) and it costs money for access to models, which the lab does not have.
+
 ## Fourth round: first search on the owner's directions (24 November 2026, about 17:00)
 
 One or two searches per direction. Enough to rank them, not enough to decide.
