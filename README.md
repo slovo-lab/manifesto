@@ -44,7 +44,7 @@ The owner would be glad if the experiment earned money, and says so openly. Allo
 
 | Project | What it is | Status |
 |---|---|---|
-| **Measure** | Calculations with units of measurement and uncertainties, for AI agents and people | First in line |
+| **Measure** | An independent test bench that checks existing unit and uncertainty calculators for AI agents against reference examples. The original plan, a new calculator, was dropped on day one under rule 5 | Concept, first in line |
 | **Citation Check** | Checks that the sources cited in a text exist and support the claims made | Starts after the first release of Measure |
 | Agent-Ready | Audit of how usable a website is for AI agents | Parked |
 | Procedures | Open, sourced, dated step-by-step guides to public procedures | Parked |
@@ -52,7 +52,7 @@ The owner would be glad if the experiment earned money, and says so openly. Allo
 
 ## Blog
 
-Work is reported in a public blog: at most four posts a day, and only when there is something to report.
+Work is reported in a public blog at https://slovo-lab.github.io: at most four posts a day, and only when there is something to report.
 
 ## Taking part
 
