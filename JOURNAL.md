@@ -20,15 +20,26 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 - **Read `mcp-data-check`** (package index): a generic checker of servers against known answers. Decide whether Measure should use or credit it. (Not for the owner; for the next session.)
 
+- **Report the time and coordinates findings to the authors?** Candidates with a clear right answer: mcp-simple-timeserver (24 hours instead of 23), @theo.foobar/mcp-time (local time labelled `Z`), mcp-geo (length doubled; NaN for latitude 91; does not start with mcp 2.x), gis-mcp-server (length and distance 139 m apart; UTM zone of Bergen), mcp-server-proj (does not start with mcp 2.x). Drafts are not written yet. Each message needs his "yes" after he reads the text in Russian.
+
 ## Current state
 
 - **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026 (tag and GitHub release created by the owner; the tag has 33 pairs). Main now has 43 reference pairs, the runner, a client for servers for AI agents, and seven adapters: two Python libraries (Pint + uncertainties, ucon) and five servers (`ucon-mcp`, `unit-converter-mcp`, `mcp-units`, `mcp-gnu-units`, `measurement-uncertainty-mcp`). 96 tests. Results on 43 pairs: Pint 32 of 32, ucon 27 of 28, every server passed every pair it has a tool for (18, 18, 20, 20 and 6). To run everything, see `requirements-adapters.txt`: mcp-gnu-units lives in an environment of its own and is found through `MEASURE_SERVER_MCP_GNU_UNITS`. The two ucon findings were reported to its authors (issues 395 and 396). Tests run automatically on every change (`.github/workflows/tests.yml`, two jobs). The site has a permanent page about the project, https://slovo-lab.github.io/measure/ and /ru/measure/, with the results table; update that page whenever the results change. The plan's steps are all done except watching the outside issues. What Measure needs now is users, not features: think about who should hear of it and draft those messages for the owner. Two more outside issues were opened on 24 November from the money trial: sarveshtalele/personal-finance-mcp 17 and apetta/vibe-math-mcp 4; watch them with the rest. Seven outside issues are open and should be looked at in each session: ucon 395 and 396, measurement-uncertainty-mcp 8 and 9, unit-converter-mcp 4, mcp-units 1, mcp-gnu-units 2 (links in `measure/outreach/2026-11-24-plan.md` and `measure/PLAN.md`). The session cannot read them through the API; use web fetch or the browser, and if neither works, say so in the log. After that Measure needs users more than features: the eight-week closing rule counts from 24 November.
 - **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date. Not yet written up: the ten pairs added after the release (degrees of freedom, rounding, temperature differences, Type B for a normal distribution). A subject for the next post.
 - **Money trial (24 November):** run and written up in `measure/pilots/money/` (measure pull request 20). Verdict in `IDEAS.md`: not a project; ordinary questions all agree with references.
+- **Time and coordinates trials (24 November):** run and written up in `measure/pilots/time/` and `measure/pilots/coordinates/` (measure pull request 23). Summary and what follows from it: `IDEAS.md`, fifth round. Proposed next build: coordinates pairs in Measure, and a new kind of pair for questions with no answer or two answers (needs a `FORMAT.md` change). Environments used: `/home/claude/timeenv`, `/home/claude/geoenv` (workspace only, rebuild from the write-ups).
 - **Second project: none.** All five ideas on the original list are now settled: Measure is being built, the other four are dropped (Citation Check, Agent-Ready, Tested Skills, and Procedures; see the log). The lab's second line of work for now is contributions to tools that Measure shows to be incomplete. A new project goes on the list only after a prior-art search, and should grow out of the method that has worked here: reference questions with cited sources, put to tools independently. Candidates found by searching are kept in `IDEAS.md`; read it before proposing anything new.
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (evening: time and coordinates trials)
+
+- The owner said to run both trials now. Time: six servers (three Python, three Node), 76 answers, 61 agree. Coordinates: four servers, 36 answers, 20 agree, 11 differ.
+- A mistake of my own, caught by a server's output: the first reference for "hours across a clock change" was 24, because Python subtracts two times in the same zone by the clock face. Corrected to 23 by converting to UTC first; the script says so in a comment and the write-up says so in the text.
+- The Australian reference numbers were written from memory and confirmed to the millimetre by GeographicLib and pyproj; the manual was not re-read. The Norway rule for UTM zones was also taken as generally documented. Both are marked in the write-up. Read the sources before these become reference pairs.
+- gis-mcp could not be installed (a dependency failed to build under Python 3.13). mcp-geo and mcp-server-proj needed `mcp<2`.
+- Voting idea, second form, recorded in `IDEAS.md`; not searched.
 
 ### 2026-11-24 (16:40: money-trial reports sent; voting idea recorded)
 
