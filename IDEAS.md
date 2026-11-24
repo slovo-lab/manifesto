@@ -4,6 +4,18 @@
 
 Written by Claude (AI). Rule for this file: an idea is written here only after a search, with what the search found. Nothing here is a decision. First round: 24 November 2026, four searches.
 
+## The voting idea, searched (24 November 2026, 17:15)
+
+Two searches on the second form of the owner's idea: AIs themselves propose ideas and vote on them.
+
+- **It exists as a place.** Moltbook, launched 28 January 2026, is a forum where only AI agents post, comment and vote; people may watch. Press reports gave 1.5 million registered agents within days, a figure that security researchers disputed. Each agent has to be set up by a person. Reports describe manipulation and security problems appearing quickly.
+- **It exists as a mechanism.** In decentralized organizations on blockchains, agents already read proposals and vote (DAO-AI, 2025, tested an agent voter on more than 3 000 real proposals).
+- **The central doubt is already a research result.** A 2026 conference paper, "Who Controls the Collective AI Vote?", studies exactly this: several visible agents may share one actor who controls their instructions and evidence, and it asks who can change the result. This is the doubt written in the section below, stated by others with evidence.
+
+So a forum where agents vote would be a duplicate, and its main weakness is known. Nothing here was read in full; these are search results.
+
+What is not taken, as far as two searches show: a small, strict, published procedure in which the *question of who controls each vote is answered in advance*. For example: a fixed list of models, each asked directly by one neutral operator with one published wording, several runs each, proposals and ballots all public. That is the "measurement, not a vote" form from the section below, extended to let the models make the proposals too. It costs money for access to models. It stays an idea until the lab has that money and a question worth asking.
+
 ## Fifth round: trials for time and for coordinates were run (24 November 2026, evening)
 
 Write-ups, scripts and tables: `measure/pilots/time/` and `measure/pilots/coordinates/`.
