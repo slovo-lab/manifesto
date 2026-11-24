@@ -18,13 +18,20 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Current state
 
-- **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026; the owner created the tag `v0.1.0` and the GitHub release the same day. The tag has 33 reference pairs; main has 43 after ten more were added. Also on main: runner, adapters for Pint + uncertainties and ucon, `tools/make_results.py`, `RESULTS.md`, 64 tests. Results on 43 pairs: Pint 0.26.2 + uncertainties 3.2.3 passed 32 of 32 pairs it has a function for; ucon 2.4.2 passed 27 of 28. The two findings were reported to ucon's authors (issues 395 and 396). Next steps are the unchecked items in `PLAN.md`: automatic test runs, adapters for agent-facing servers.
+- **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026 (tag and GitHub release created by the owner; the tag has 33 pairs). Main now has 43 reference pairs, the runner, a client for servers for AI agents (`bench/mcp_client.py`), and four adapters: Pint + uncertainties, ucon, `ucon-mcp` (server) and `unit-converter-mcp` (server). 78 tests. Results on 43 pairs: Pint 32 of 32, ucon 27 of 28, each server 18 of 18 on the conversions it has a tool for. The two ucon findings were reported to its authors (issues 395 and 396). Both READMEs open with a plain-language description of the project. Next steps are the unchecked items in `PLAN.md`: more servers (mcp-units, mcp-gnu-units; measurement-uncertainty-mcp is hosted and needs an account, so ask the owner), automatic test runs.
 - **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date. Not yet written up: the ten pairs added after the release (degrees of freedom, rounding, temperature differences, Type B for a normal distribution). A subject for the next post.
 - **Second project: none for now (decided 24 November 2026).** Four of the five ideas on the original list turned out to be crowded fields; see the log. The lab's effort stays on Measure, whose main promise, testing the servers that AI agents actually call, is not delivered yet. The one remaining candidate is Procedures (sourced, dated step-by-step guides to public procedures). It needs a careful prior-art study and a view on the risk of wrong guidance before any decision; one search on 24 November found servers that expose Spanish open data (BOE, INE, datos.gob.es) but nothing that publishes procedures as checked steps. Do that study in a later session, not as a side task.
-- **CLAIMED at 15:25 Madrid time on 24 November by the afternoon session with the owner: the PLAN.md step "adapters for tools that run as servers for AI agents" in `measure`. Other sessions: do not start it until this note is replaced.**
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (afternoon, servers for AI agents tested)
+
+- `measure` pull request 12: a client that starts a server for AI agents as a child process and calls its tools; adapters for `ucon-mcp` (ucon-tools 0.13.0) and `unit-converter-mcp` 0.1.2. Both passed all 18 conversion pairs they have a tool for and refused to convert a mass into a length. Neither has a tool for adding quantities or for uncertainty. So for agent-facing servers the bench currently tests conversion only; the uncertainty pairs have no server to run on yet.
+- Observation: `ucon-mcp` converts `10 nmi` to 18.52 km (right), while the ucon library gives the nano-mile answer. Recorded in the results notes.
+- Mistake fixed on the way: the first version of the client kept the program from exiting, because a worker thread waited forever for the next request. The test run hung and was stopped by hand. The wait is now a short sleep loop on a daemon thread.
+- At the owner's request, a plain-language description of Measure was put at the top of both READMEs.
+- Blog: nothing published; the daily limit of four posts was already reached. Subjects waiting for the next post: the ten pairs added after the release, the two servers tested, and the decision not to start a second project.
 
 ### 2026-11-24 (afternoon, second project: prior-art searches and decision)
 
