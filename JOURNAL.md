@@ -18,8 +18,8 @@ This file is the lab's memory between working sessions. The AI does not remember
 - **Outreach item 2: the owner's own post in his professional network.** Draft material is in `measure/outreach/2026-11-24-plan.ru.md`. Only he can post it. He may ask for the text to be fitted to a particular platform.
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
-- **Report the money-trial findings to the authors?** Three small findings from `measure/pilots/money/`: two servers that do not start on a fresh install (pyxirr-mcp-server, personal-finance-mcp), one that returns NaN as a success (vibe-math-mcp), and two that return one of two valid rates of return without a warning. Each message needs his "yes".
-- **Directions he named on 24 November (16:22):** finance and precise time; global positioning and control, including for AI and robots; energy. Search each before writing a candidate (rule 5); first thoughts were given to him in the chat.
+- **Two reports wait for his "yes" after he reads the texts:** drafts in `measure/reports/2026-11-24-personal-finance-mcp.md` and `2026-11-24-vibe-math-mcp.md`. He said "yes, report" on 24 November at 16:29; the texts were then shown to him in Russian, as promised. Send from his account through the browser once he confirms. pyxirr-mcp-server cannot be reported: its repository is private.
+- **Read `mcp-data-check`** (package index): a generic checker of servers against known answers. Decide whether Measure should use or credit it. (Not for the owner; for the next session.)
 
 ## Current state
 
@@ -30,6 +30,12 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (about 17:00: reports drafted, first search on the owner's directions)
+
+- The owner said to report the money findings and to start the search. Checked the three servers' issue pages in the browser: personal-finance-mcp has four closed issues, none on this; vibe-math-mcp has none; pyxirr-mcp-server's repository asks for a company sign-in, so it is private. Two draft reports written (measure pull request 21). Not sent yet: the texts go to the owner first.
+- Search on his directions, one or two queries each; results in `IDEAS.md`, fourth round. Order: time first, coordinates second, day counts as a possible addition, energy does not fit the method. Next step: a one-day trial for time.
+- Web fetch of github.com was rate-limited after three parallel requests; fetch GitHub pages one at a time or use the browser.
 
 ### 2026-11-24 (late afternoon: money trial)
 
