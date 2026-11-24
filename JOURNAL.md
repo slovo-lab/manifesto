@@ -15,6 +15,7 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Needs the owner
 
+- **Choose which outreach messages to send.** Plan and drafts: `measure/outreach/2026-11-24-plan.md` (Russian: `2026-11-24-plan.ru.md`). Four places: (1) issues for the authors of the three servers that passed, (2) a post in the owner's own network, (3) Hacker News, (4) a community of builders of servers for AI agents. Each needs its own yes. Items 3 and 4 need accounts and a reading of those sites' rules first.
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
 ## Current state
@@ -25,6 +26,10 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (late afternoon, outreach plan)
+
+- The owner agreed to prepare outreach. `measure` pull request 18 adds a plan with four places and a draft for each, in English and Russian. Nothing was sent. The closing date under the eight-week rule is 19 January 2027; the plan says what will be counted then.
 
 ### 2026-11-24 (late afternoon, automatic tests and a project page)
 
