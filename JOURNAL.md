@@ -14,7 +14,6 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Needs the owner
 
-- **Confirm the two reports to ucon's authors.** Text is in `measure/reports/2026-11-24-ucon.md`: (1) `nmi` is read as nano-mile or nautical mile depending on the target unit; (2) the uncertainty of `x * x` differs from `x ** 2`. They would be opened as two issues at https://github.com/withtwoemms/ucon. Our fairness rule says failures are reported to the authors together with publication, and the results were published on 24 November, so this is the most pressing item.
 - **ISO 80000-1 clause number.** On 24 November the owner said he had dealt with this item but did not give the clause number in the session. Until the number is written here, the pair `dim-add-length-time` keeps citing ISO 31-0:1992, clause 2.2.1 (withdrawn). Needed: the clause of ISO 80000-1 (and its year) that says quantities can be added only if they are of the same kind.
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
@@ -26,6 +25,11 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready, Procedures, Tested Skills: parked.
 
 ## Log
+
+### 2026-11-24 (afternoon, reports to ucon sent)
+
+- The owner confirmed the reports to ucon's authors. They were opened from his account through the browser, after he signed in himself: https://github.com/withtwoemms/ucon/issues/395 (`nmi`) and https://github.com/withtwoemms/ucon/issues/396 (`x * x`). The repository's issue list was searched first; no earlier report of either point was found. Recorded in `measure` (pull request 10 there). Watch for the authors' answers and record them in `measure`.
+- A branch-name collision happened in this repository: two sessions both used the name `journal-ucon`. Give branches names that include the date and something specific.
 
 ### 2026-11-24 (ten more pairs, after the release)
 
