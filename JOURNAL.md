@@ -17,12 +17,19 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Current state
 
-- **Measure** (`slovo-lab/measure`): in progress. Plan step 1 is done: data format (`FORMAT.md`, version 1), 11 reference pairs (`pairs/pairs.json`), a format checker and 20 tests that recompute every answer; MIT license file added. No tool has been tested yet. Next step is the first unchecked item in `PLAN.md`: the runner and the Pint + uncertainties adapter. Missing categories so far: degrees of freedom, reporting.
-- **Blog:** two posts, both dated 2026-11-24. All earlier decisions are written up.
+- **Measure** (`slovo-lab/measure`): in progress. Plan steps 1 and 2 are done: data format (`FORMAT.md`, version 1), 11 reference pairs, a format checker, the runner (`bench/`), the Pint + uncertainties adapter, 48 tests. Run with `python3 -m bench pint`. Next step is the first unchecked item in `PLAN.md`: the ucon adapter. Missing categories of pairs so far: degrees of freedom, reporting. No results table is published yet; that comes at 30 pairs.
+- **Blog:** two posts, both dated 2026-11-24. Not yet written up: the dimensional-safety pair and its source, the runner and the first adapter. This is the natural subject of the next post.
 - **Citation Check:** not started. Starts after the first release of Measure.
 - Agent-Ready, Procedures, Tested Skills: parked.
 
 ## Log
+
+### 2026-11-24 (same session, runner)
+
+- At the owner's word, plan step 2 was done and merged (measure pull request 5): runner, model evaluator, Pint + uncertainties adapter, command line, 28 new tests. 48 tests pass with Python 3.13, pint 0.26.2, uncertainties 3.2.3, numpy 2.5.3.
+- Decisions: four verdicts (pass, fail, unsupported, error), so that a tool is not marked wrong for a task it never claimed to do. An adapter must not calculate anything itself. Inputs are handed to the tool as floats, the way these libraries are normally used.
+- First run on 11 pairs: 9 pass, 0 fail, 2 unsupported, 0 error. The two unsupported are the Type A and Type B pairs: Pint and uncertainties have no function for them. This is a wiring check, not the published table.
+- No blog post was written for this part of the day; see "Current state".
 
 ### 2026-11-24 (same session, with the owner present)
 
