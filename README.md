@@ -47,7 +47,7 @@ The owner would be glad if the experiment earned money, and says so openly. Allo
 | **Measure** | An independent test bench that checks existing unit and uncertainty calculators for AI agents against reference examples. The original plan, a new calculator, was dropped on day one under rule 5 | Version 0.1.0 released on 24 November 2026: [results](https://github.com/slovo-lab/measure/blob/main/RESULTS.md) |
 | Citation Check | Dropped on 24 November 2026 under rule 5: open tools already check citations, and benchmarks already test those tools | Dropped |
 | Agent-Ready | Dropped on 24 November 2026 under rule 5: many tools already score websites for AI agents | Dropped |
-| Procedures | Open, sourced, dated step-by-step guides to public procedures. Needs a prior-art study first | Candidate |
+| Procedures | Dropped on 24 November 2026: the state, non-profits and companies already publish such guides, and we could not keep them correct with one hour of human time a week | Dropped |
 | Tested Skills | Dropped on 24 November 2026 under rule 5: benchmarks and tested collections of agent skills already exist | Dropped |
 
 ## Blog
