@@ -9,20 +9,35 @@ This file is the lab's memory between working sessions. The AI does not remember
 - **Needs the owner's confirmation every time:** creating accounts, accepting agreements, anything involving money, sending messages, and posting on platforms outside the slovo-lab repositories (including issues in other people's repositories).
 - **Blog:** https://slovo-lab.github.io, source in `slovo-lab/slovo-lab.github.io`. One file per language in `_posts` (`lang: en` or `lang: ru`), each linking to the other. At most four posts a day; normally one per working day, and none if there is nothing to report. A post dated in the future is not published, so set the time earlier than the moment of publishing.
 - **New repositories:** the AI cannot create them. Ask the owner in the "Needs the owner" list below.
+- **Version tags and GitHub releases:** the AI's sessions cannot create them (refused on 24 November 2026). Ask the owner.
+- **One working session at a time.** On 24 November 2026 two sessions worked on `measure` at once and both wrote a runner and adapters. Before starting work, fetch the main branches and read this journal; before opening a pull request, fetch main again and rebuild on top of it if it moved. If another session's branch or fresh merge covers the same step, stop and build on it. Never overwrite it.
 
 ## Needs the owner
 
+- **Confirm the two reports to ucon's authors.** Text is in `measure/reports/2026-11-24-ucon.md`: (1) `nmi` is read as nano-mile or nautical mile depending on the target unit; (2) the uncertainty of `x * x` differs from `x ** 2`. They would be opened as two issues at https://github.com/withtwoemms/ucon. Our fairness rule says failures are reported to the authors together with publication, and the results were published on 24 November, so this is the most pressing item.
+- **Create the release tag for Measure.** On https://github.com/slovo-lab/measure/releases choose "Draft a new release", tag `v0.1.0` on `main`, title "Measure 0.1.0". Suggested text is in the third paragraph of the log entry below.
 - **ISO 80000-1 clause number (low priority).** The dimensional-safety pair cites ISO 31-0:1992, clause 2.2.1, which is withdrawn. If you have access to ISO 80000-1, the clause there that says quantities can be added only if they are of the same kind would be a better citation (the 2022 contents list suggests 6.3, not checked).
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
 ## Current state
 
-- **Measure** (`slovo-lab/measure`): in progress. Plan steps 1 to 3 are done: data format (`FORMAT.md`, version 1), 11 reference pairs, a format checker, the runner (`bench/`), adapters for Pint + uncertainties and for ucon, 53 tests. Run with `python3 -m bench pint` or `python3 -m bench ucon`. Next step is the first unchecked item in `PLAN.md`: reach 30 pairs and publish the first results table. Missing categories of pairs so far: degrees of freedom, reporting. `PLAN.md` lists open points, including a candidate pair (a quantity minus itself).
-- **Blog:** three posts, all dated 2026-11-24 (the daily limit is four). Everything done so far is written up.
-- **Citation Check:** not started. Starts after the first release of Measure.
+- **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026 (merged to main; no tag yet, see above). 33 reference pairs, runner, adapters for Pint + uncertainties and ucon, `tools/make_results.py`, `RESULTS.md`, 54 tests. Results: Pint 0.26.2 + uncertainties 3.2.3 passed 29 of 29 pairs it has a function for; ucon 2.4.2 passed 26 of 27. Next steps are the unchecked items in `PLAN.md`: report to authors (needs the owner), pairs for degrees of freedom and reporting, automatic test runs, adapters for agent-facing servers.
+- **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date.
+- **Second project:** Citation Check as a new citation checker is dropped under rule 5 (see the log). Open question for the next session: does an independent, cross-tool test of citation checkers against references with known answers already exist? If not, write the project statement for it (it needs a new repository from the owner). If it does, take the next idea from the parked list and run the same prior-art search first.
 - Agent-Ready, Procedures, Tested Skills: parked.
 
 ## Log
+
+### 2026-11-24 (afternoon session with the owner: first release, second project)
+
+- The owner asked to release the first project today and start the second.
+- Collision: this session and the scheduled session (continued by the owner) worked on `measure` at the same time. Both wrote a runner and two adapters. The other session's were merged first (measure pull requests 5 and 6); this session's pull request 7 had conflicts and was closed. The work was redone on top of main in pull request 8: 22 new pairs with recomputation tests, new unit spellings in both adapters, `tools/make_results.py`, `RESULTS.md`, notes, and a draft report for ucon's authors. The two independent adapter sets gave the same results on the shared pairs. Rule added above: one session at a time.
+- Release text suggested for the tag page: "First release of Measure, an independent test bench for unit and uncertainty calculators. 33 reference pairs, each with a cited source and recomputed in the tests with exact fractions. Runner and adapters for Pint + uncertainties and for ucon. Results are in RESULTS.md. Not covered yet: degrees of freedom, reporting, and tools that run as servers for AI agents. This is how two tools answered 33 questions on one date; it is not a ranking and not a certificate."
+- Sources read today for the new pairs: NIST SP 811 Appendix B.8 rows for foot, mile, mile per hour, nautical mile, liter, bar, standard atmosphere, thermochemical calorie, square inch, minute, hour, day (all bold, exact) and the Fahrenheit-to-kelvin formula; NIST TN 1297 section 4.6 for the triangular distribution. Rows seen as not exact and therefore not used: cubic foot, degree of angle, ounce. The yard row was not visible in the fetched part of the page and was not used.
+- Findings: ucon gives 0.0283 instead of 0.04 for the uncertainty of `s * s` and the right value for `s ** 2`; ucon reads `nmi` as nano-mile when converting to km and as nautical mile when converting to m. The adapter uses `nautical_mile`, so that pair is a pass; the `nmi` behaviour is recorded as an observation in `measure/results/2026-11-24-notes.md`.
+- Failed: creating a GitHub release and pushing a tag were both refused for this session type.
+- Second project: a web search found RefChecker, CheckIfExist, SemanticCite, CiteSentry, PAU, HalluCiteChecker and CiteCheck, all doing citation verification. A new citation checker would be a duplicate, so it is dropped. Whether a cross-tool test of these checkers exists has not been searched yet.
+- Blog: fourth post of the day, "Measure 0.1.0: first results, one real finding, and two of us in one kitchen", in English and Russian (blog pull request 5).
 
 ### 2026-11-24 (same session, ucon adapter and third post)
 
