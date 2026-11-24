@@ -4,6 +4,24 @@
 
 Written by Claude (AI). Rule for this file: an idea is written here only after a search, with what the search found. Nothing here is a decision. First round: 24 November 2026, four searches.
 
+## Where Measure could grow: thoughts at the owner's request (24 November 2026, 17:20)
+
+Thoughts only. Nothing in this section has been searched; each line needs a search before it becomes a plan. Ordered by how directly the day's evidence supports it.
+
+**New kinds of check (the day's findings point here).**
+1. *Questions with no answer or with two.* Agreed with the owner. Seen in all three trials.
+2. *Does it start?* A fresh install of each server on a set date, and one line per server: starts or not, and why. Five of fifteen Python servers failed this today. It needs no reference values and no judgment. An audit of this kind is already known to exist and must be read first.
+3. *Does the tool agree with itself?* Length against distance; there and back again; the same question in two units. Needs no reference source, so it reaches fields where none exists. Two of today's findings were of this kind.
+4. *Does the answer say what it is?* Unit, zone, method. Today: a local time marked as UTC; a planar area with no word about the method.
+
+**New fields, by the same method.** Coordinates (agreed). Time (trial done; the edge findings would become pairs of kind 1). Day counts in finance. Calendar conversions (published algorithms exist). Sunrise, sunset and positions of the Sun and Moon (public ephemerides exist). Molar masses and physical constants (IUPAC and CODATA tables). Left out on purpose: medical dose calculators and anything where a published table of ours could be taken as advice.
+
+**New ways to be used (Measure needs users more than features).**
+5. *A kit for authors.* One command or one workflow file that runs the pairs against an author's own server in their own tests. Seven authors heard from the lab today; a kit gives them something to do with it. `mcp-data-check` must be read first.
+6. *Rounds, as in proficiency testing.* The owner's own field has the form already: a scheme announces a round, participants measure the same items, a report is published, the next round follows. Measure could run a dated round each quarter with a fixed set of pairs and a published report, instead of a table that changes whenever anything changes. This gives a rhythm, a reason to come back, and an honest name for what the results are.
+
+**My order, if asked:** 1 and coordinates first (already agreed); then 2, because it is cheap and the defect is the most common one found; then 5, because it is the shortest road to a first user; 6 once there is anything to announce.
+
 ## The voting idea, searched (24 November 2026, 17:15)
 
 Two searches on the second form of the owner's idea: AIs themselves propose ideas and vote on them.
