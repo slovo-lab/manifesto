@@ -23,6 +23,12 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Current state
 
+- **Task for the session of 25 November, set by the owner (24 November, 17:18):** put together a knowledge base of metrologists who work on AI and machine learning, and of who could find this project useful. Do it in this order, before the format work:
+  - Search first: national metrology institutes with groups on AI, software or data (for example NIST, PTB, NPL, LNE, INRIM, CEM in Spain, VNIIM), the European networks and projects on metrology for AI and digital transformation, the committees (BIPM and CIPM digital work, JCGM, IMEKO, ISO/IEC JTC 1/SC 42, CEN-CENELEC), the people behind TraCIM, and published papers on metrology for machine learning.
+  - Write it to `measure/outreach/metrology-ai.md` with a Russian version: for each entry what they work on, a source link, and one line on why Measure could matter to them. Only what is public and professional: organisation, group, role, published work. No private details and no personal contact data beyond what a person publishes for professional contact.
+  - Every entry needs a source that was opened and read; no names from memory.
+  - This is a list for the owner. Writing to anyone on it needs his "yes" each time, with the text shown to him in Russian first.
+
 - **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026 (tag and GitHub release created by the owner; the tag has 33 pairs). Main now has 43 reference pairs, the runner, a client for servers for AI agents, and seven adapters: two Python libraries (Pint + uncertainties, ucon) and five servers (`ucon-mcp`, `unit-converter-mcp`, `mcp-units`, `mcp-gnu-units`, `measurement-uncertainty-mcp`). 96 tests. Results on 43 pairs: Pint 32 of 32, ucon 27 of 28, every server passed every pair it has a tool for (18, 18, 20, 20 and 6). To run everything, see `requirements-adapters.txt`: mcp-gnu-units lives in an environment of its own and is found through `MEASURE_SERVER_MCP_GNU_UNITS`. The two ucon findings were reported to its authors (issues 395 and 396). Tests run automatically on every change (`.github/workflows/tests.yml`, two jobs). The site has a permanent page about the project, https://slovo-lab.github.io/measure/ and /ru/measure/, with the results table; update that page whenever the results change. The plan's steps are all done except watching the outside issues. What Measure needs now is users, not features: think about who should hear of it and draft those messages for the owner. Five more were opened on 24 November from the time and coordinates trials: andybrandt/mcp-simple-timeserver 12, TheoBrigitte/mcp-time 17, tabibhasann/geo-mcp 13, matbel91765/GIS-MCP-Server 4, radial-hks/mcp-server-proj 1 (fourteen outside issues in all). Two more outside issues were opened on 24 November from the money trial: sarveshtalele/personal-finance-mcp 17 and apetta/vibe-math-mcp 4; watch them with the rest. Seven outside issues are open and should be looked at in each session: ucon 395 and 396, measurement-uncertainty-mcp 8 and 9, unit-converter-mcp 4, mcp-units 1, mcp-gnu-units 2 (links in `measure/outreach/2026-11-24-plan.md` and `measure/PLAN.md`). The session cannot read them through the API; use web fetch or the browser, and if neither works, say so in the log. After that Measure needs users more than features: the eight-week closing rule counts from 24 November.
 - **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date. Not yet written up: the ten pairs added after the release (degrees of freedom, rounding, temperature differences, Type B for a normal distribution). A subject for the next post.
 - **Money trial (24 November):** run and written up in `measure/pilots/money/` (measure pull request 20). Verdict in `IDEAS.md`: not a project; ordinary questions all agree with references.
@@ -35,6 +41,10 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (17:36: task for tomorrow)
+
+- The owner asked to add a task for tomorrow: a knowledge base of metrologists in AI and machine learning who could find the project useful. Written at the top of "Current state" with how to do it.
 
 ### 2026-11-24 (17:34: new fields agreed)
 
