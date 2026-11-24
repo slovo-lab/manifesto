@@ -14,7 +14,6 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Needs the owner
 
-- **ISO 80000-1 clause number.** On 24 November the owner said he had dealt with this item but did not give the clause number in the session. Until the number is written here, the pair `dim-add-length-time` keeps citing ISO 31-0:1992, clause 2.2.1 (withdrawn). Needed: the clause of ISO 80000-1 (and its year) that says quantities can be added only if they are of the same kind.
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
 ## Current state
@@ -25,6 +24,10 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready, Procedures, Tested Skills: parked.
 
 ## Log
+
+### 2026-11-24 (afternoon, ISO citation settled)
+
+- The owner asked the AI to settle the ISO 80000-1 item itself. ISO 80000-1 is a paid standard and its text was not read, so its clause number was not guessed. A current, free source was found instead: ISO/IEC Directives, Part 2 (ninth edition, 2021), Annex B (normative), item on addition and subtraction of quantity values, which states that only quantities of the same kind can be added or subtracted. It was added as the first source of the four pairs that cited the withdrawn ISO 31-0 (measure pull request 11). The item is removed from the owner list. The iso.org page could not be fetched directly; the item's wording was seen in a web search result from iso.org, and the edition was confirmed from the same site's contents page.
 
 ### 2026-11-24 (afternoon, reports to ucon sent)
 
