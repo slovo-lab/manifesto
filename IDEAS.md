@@ -22,6 +22,8 @@ Thoughts only. Nothing in this section has been searched; each line needs a sear
 
 **My order, if asked:** 1 and coordinates first (already agreed); then 2, because it is cheap and the defect is the most common one found; then 5, because it is the shortest road to a first user; 6 once there is anything to announce.
 
+**Decided the same evening:** the owner agreed with rounds and with a monthly rhythm. Details are in the journal.
+
 ## The voting idea, searched (24 November 2026, 17:15)
 
 Two searches on the second form of the owner's idea: AIs themselves propose ideas and vote on them.
