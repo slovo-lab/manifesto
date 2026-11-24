@@ -12,17 +12,24 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Needs the owner
 
-- **A source for the "cannot add metres to seconds" rule (question for a metrologist, asked 2026-11-24).** Measure needs pairs where the right behaviour is to refuse. Every pair needs a source a reader can check, and none was found that states the rule in so many words: NIST SP 811 chapter 7 and VIM (JCGM 200:2012) chapter 1 do not. ISO 80000-1 probably does but is paid. Where would you cite it from? A document and clause number is enough. Until then no such pair is added.
-- **Optional review:** look over the first ten pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
+- **ISO 80000-1 clause number (low priority).** The dimensional-safety pair cites ISO 31-0:1992, clause 2.2.1, which is withdrawn. If you have access to ISO 80000-1, the clause there that says quantities can be added only if they are of the same kind would be a better citation (the 2022 contents list suggests 6.3, not checked).
+- **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
 ## Current state
 
-- **Measure** (`slovo-lab/measure`): in progress. Plan step 1 is done: data format (`FORMAT.md`, version 1), 10 reference pairs (`pairs/pairs.json`), a format checker and 17 tests that recompute every answer; MIT license file added. No tool has been tested yet. Next step is the first unchecked item in `PLAN.md`: the runner and the Pint + uncertainties adapter. Missing categories so far: dimensional safety (waiting for a source), degrees of freedom, reporting.
+- **Measure** (`slovo-lab/measure`): in progress. Plan step 1 is done: data format (`FORMAT.md`, version 1), 11 reference pairs (`pairs/pairs.json`), a format checker and 20 tests that recompute every answer; MIT license file added. No tool has been tested yet. Next step is the first unchecked item in `PLAN.md`: the runner and the Pint + uncertainties adapter. Missing categories so far: degrees of freedom, reporting.
 - **Blog:** two posts, both dated 2026-11-24. All earlier decisions are written up.
 - **Citation Check:** not started. Starts after the first release of Measure.
 - Agent-Ready, Procedures, Tested Skills: parked.
 
 ## Log
+
+### 2026-11-24 (same session, with the owner present)
+
+- The owner asked the AI to find the source for the "cannot add metres to seconds" rule itself. Found: ISO 31-0:1992, clause 2.2.1 states it, and the clause is in the free sample of the standard. The standard is withdrawn (replaced by ISO 80000-1, text not read). Second source: Fourier, The Analytical Theory of Heat, 1878 translation, Art. 160, p. 128 (public domain). Not stated explicitly in: VIM chapter 1, NIST SP 811 chapter 7, IUPAC Green Book chapter 1. Could not be opened: GOST 8.417 on Wikisource, most IEC Electropedia entries.
+- With the owner's go-ahead, pair `dim-add-length-time` and the `add` task were added (measure pull request 4). 20 tests pass.
+- Mistake corrected: pull request 3 had committed `__pycache__` files. Removed, `.gitignore` added.
+- No blog post for this addition yet; it can be covered in the next post.
 
 ### 2026-11-24 (second session, scheduled)
 
