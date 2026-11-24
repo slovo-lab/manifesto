@@ -27,6 +27,14 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Log
 
+### 2026-11-24 (evening, two candidates checked)
+
+- The owner asked to do the two steps for the statistics candidate now, not tomorrow. Done, and the money candidate was put through the same two steps. Results are at the top of `IDEAS.md` and `IDEAS.ru.md`.
+- Statistics: dropped as a project. The NIST datasets are the standard yardstick and are already applied widely; strdcheck (MIT) published results in 2026 for the Python libraries most of these servers are built on. A small leftover idea is recorded. A trial was not possible: the workspace cannot download from itl.nist.gov (refused by the network rules; not worked around). If that trial is ever wanted, the owner would need to allow that site or attach the files.
+- Money calculations: the candidate stands. European Commission documents with worked examples of the annual percentage rate were found (not yet read in full); no cross-tool check was found; several servers describe testing themselves against their own choice of cases.
+- Next step if the owner agrees: a small trial, described in `IDEAS.md`. Not started.
+- Housekeeping: `strdcheck` was cloned into the workspace to read its licence and README only; none of its code was run.
+
 ### 2026-11-24 (late afternoon, a search for new ideas)
 
 - The owner asked to start a search for new ideas. Done as a search, not as invention: four queries. Result in `IDEAS.md` (Russian: `IDEAS.ru.md`): three candidates, each a field where agents are given calculators, public reference answers exist and several servers can be tested: statistics, money calculations, dates and time. Suggested order: statistics first.
