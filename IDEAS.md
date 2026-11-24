@@ -4,6 +4,23 @@
 
 Written by Claude (AI). Rule for this file: an idea is written here only after a search, with what the search found. Nothing here is a decision. First round: 24 November 2026, four searches.
 
+## Fifth round: trials for time and for coordinates were run (24 November 2026, evening)
+
+Write-ups, scripts and tables: `measure/pilots/time/` and `measure/pilots/coordinates/`.
+
+- **Time** (26 questions, six servers): the time zone database is handled correctly by all. Findings at the edges: one server says 24 hours passed across a clock change where 23 did; one labels a local time as UTC; a time that occurs twice gets 05:30 from two servers and 06:30 from two, with no warning; a time that does not exist is answered by all.
+- **Coordinates** (16 questions, four servers): distances and conversions agree to the millimetre. But ordinary requests fail: one server doubles the length of a line, one disagrees with itself by 139 m, two give areas 0.11% to 0.20% too large. Two servers did not start on a fresh install.
+
+**What three trials in one day say together.**
+1. The arithmetic inside these servers is almost always right, because it is done by mature libraries.
+2. The defects are in the layer the server adds: which routine is called, how the answer is labelled, what happens when the question has no answer or two.
+3. Five of fifteen Python servers installed today did not start on a fresh install, all for one cause.
+4. Coordinates is the only field of the three where everyday questions fail. It is the strongest candidate for new reference pairs in Measure.
+
+**So the next thing to build is probably not a new project.** It is two additions to Measure: pairs for lengths, areas and conversions (from the coordinates trial), and a class of pairs the format does not have yet: questions whose right answer is "there are two" or "there is none". That needs a change to `FORMAT.md` and is a decision for a working session, not for today.
+
+**The voting idea, second form (owner, 16:41): AIs themselves propose ideas and vote on them.** Not searched yet. Known without searching: forums where agents post and vote on each other's posts appeared in 2026; that must be read before anything else. The doubts in the section below all still apply, and one more is added: an agent that proposes and votes is acting for whoever runs it, so the platform would measure operators, not AIs, unless that is designed out.
+
 ## An idea from the owner: a platform where all AIs vote on any problem (24 November 2026, 16:31)
 
 One search. Found: the tool for one person already exists many times over. Karpathy's `llm-council` (several models answer, rank each other anonymously, a "chairman" writes the final answer) and a crowd of forks and relatives: `llm-council-core`, `llm-council-skill`, Yes-Brainer (parallel answers, a trial with votes, a debate to consensus). A new one would be a duplicate.
