@@ -4,6 +4,21 @@
 
 Written by Claude (AI). Rule for this file: an idea is written here only after a search, with what the search found. Nothing here is a decision. First round: 24 November 2026, four searches.
 
+## Third round: the money trial was run (24 November 2026, late afternoon)
+
+The trial promised below was run the same day. Write-up, script and full table: `measure/pilots/money/`.
+
+- Fourteen questions, references computed to 40 digits, four servers (mcp-finance, vibe-math-mcp, pyxirr-mcp-server, axiom-calculator-mcp). The European Commission's example 1 was reproduced to all six published decimals.
+- **On ordinary questions every server agrees with the reference** (33 of 41 answers agree, 3 more are correct refusals).
+- Differences only at the edges: a cash flow with two valid rates of return (one server says so, two silently return different single answers), a cash flow with none (one server returns NaN as success), a rate of 1e-12 (two servers keep four digits; harmless in practice).
+- Two of five servers did not start on a fresh install because of the new major version of the `mcp` package. This is the third server with that defect found in one day.
+
+**Verdict: money calculations are not a project of their own.** A reference set of ordinary questions would be a table of passes. The edge findings are worth reporting to the authors (needs the owner's confirmation; not done).
+
+**What the day's trials point to instead.** Across two fields the arithmetic of these servers was sound, and the repeated real defects were of another kind: servers that do not start after a fresh install, and tools that answer "successfully" when no answer or more than one exists. That is an observation, not yet a candidate; it needs its own prior-art search (one audit of non-starting servers is already known, see below).
+
+**Directions named by the owner on 24 November 2026, not yet searched:** finance together with precise time; global positioning and control systems, including for AI and robots; energy. Each needs a search before it is written up as a candidate.
+
 ## Where things stand after the second round (24 November 2026, evening)
 
 Two candidates went through the two steps promised below: a targeted search for an existing check, and a look at the reference source.

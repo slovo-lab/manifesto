@@ -18,14 +18,25 @@ This file is the lab's memory between working sessions. The AI does not remember
 - **Outreach item 2: the owner's own post in his professional network.** Draft material is in `measure/outreach/2026-11-24-plan.ru.md`. Only he can post it. He may ask for the text to be fitted to a particular platform.
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
+- **Report the money-trial findings to the authors?** Three small findings from `measure/pilots/money/`: two servers that do not start on a fresh install (pyxirr-mcp-server, personal-finance-mcp), one that returns NaN as a success (vibe-math-mcp), and two that return one of two valid rates of return without a warning. Each message needs his "yes".
+- **Directions he named on 24 November (16:22):** finance and precise time; global positioning and control, including for AI and robots; energy. Search each before writing a candidate (rule 5); first thoughts were given to him in the chat.
+
 ## Current state
 
 - **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026 (tag and GitHub release created by the owner; the tag has 33 pairs). Main now has 43 reference pairs, the runner, a client for servers for AI agents, and seven adapters: two Python libraries (Pint + uncertainties, ucon) and five servers (`ucon-mcp`, `unit-converter-mcp`, `mcp-units`, `mcp-gnu-units`, `measurement-uncertainty-mcp`). 96 tests. Results on 43 pairs: Pint 32 of 32, ucon 27 of 28, every server passed every pair it has a tool for (18, 18, 20, 20 and 6). To run everything, see `requirements-adapters.txt`: mcp-gnu-units lives in an environment of its own and is found through `MEASURE_SERVER_MCP_GNU_UNITS`. The two ucon findings were reported to its authors (issues 395 and 396). Tests run automatically on every change (`.github/workflows/tests.yml`, two jobs). The site has a permanent page about the project, https://slovo-lab.github.io/measure/ and /ru/measure/, with the results table; update that page whenever the results change. The plan's steps are all done except watching the outside issues. What Measure needs now is users, not features: think about who should hear of it and draft those messages for the owner. Seven outside issues are open and should be looked at in each session: ucon 395 and 396, measurement-uncertainty-mcp 8 and 9, unit-converter-mcp 4, mcp-units 1, mcp-gnu-units 2 (links in `measure/outreach/2026-11-24-plan.md` and `measure/PLAN.md`). The session cannot read them through the API; use web fetch or the browser, and if neither works, say so in the log. After that Measure needs users more than features: the eight-week closing rule counts from 24 November.
 - **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date. Not yet written up: the ten pairs added after the release (degrees of freedom, rounding, temperature differences, Type B for a normal distribution). A subject for the next post.
+- **Money trial (24 November):** run and written up in `measure/pilots/money/` (measure pull request 20). Verdict in `IDEAS.md`: not a project; ordinary questions all agree with references.
 - **Second project: none.** All five ideas on the original list are now settled: Measure is being built, the other four are dropped (Citation Check, Agent-Ready, Tested Skills, and Procedures; see the log). The lab's second line of work for now is contributions to tools that Measure shows to be incomplete. A new project goes on the list only after a prior-art search, and should grow out of the method that has worked here: reference questions with cited sources, put to tools independently. Candidates found by searching are kept in `IDEAS.md`; read it before proposing anything new.
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (late afternoon: money trial)
+
+- The owner said to run the money trial now. Five finance servers installed from the package index into separate environments; a sixth (finance-engines-mcp) is not on the index. Fourteen questions, references by 40-digit arithmetic; the European Commission's 2015 example 1 reproduced (6.434412%).
+- Result: all ordinary questions agree. Edge differences and two servers that do not start with mcp 2.x; details in `measure/pilots/money/README.md`. Those two were tested with `mcp<2`, and the write-up says so.
+- Decision: money calculations are not a second project. Nothing sent to any author.
+- The owner named new directions to think about (finance and time, positioning and control, energy). Recorded in `IDEAS.md` as not yet searched.
 
 ### 2026-11-24 (evening, two candidates checked)
 
