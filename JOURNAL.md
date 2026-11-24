@@ -26,6 +26,12 @@ This file is the lab's memory between working sessions. The AI does not remember
 - **Task for the session of 25 November, set by the owner (24 November, 17:18):** put together a knowledge base of metrologists who work on AI and machine learning, and of who could find this project useful. Do it in this order, before the format work:
   - Search first: national metrology institutes with groups on AI, software or data (for example NIST, PTB, NPL, LNE, INRIM, CEM in Spain, VNIIM), the European networks and projects on metrology for AI and digital transformation, the committees (BIPM and CIPM digital work, JCGM, IMEKO, ISO/IEC JTC 1/SC 42, CEN-CENELEC), the people behind TraCIM, and published papers on metrology for machine learning.
   - Write it to `measure/outreach/metrology-ai.md` with a Russian version: for each entry what they work on, a source link, and one line on why Measure could matter to them. Only what is public and professional: organisation, group, role, published work. No private details and no personal contact data beyond what a person publishes for professional contact.
+  - **Scope, left to the AI by the owner (24 November, 17:37) and decided so:** four circles, in this order of closeness to Measure, about thirty entries in the first pass, Europe first and then the rest of the world.
+    1. People and groups who test measurement software against reference data: TraCIM and its successors, and software validation groups in national institutes. They invented the method Measure borrows.
+    2. Authors and maintainers of uncertainty calculators that metrologists already use (for example the NIST Uncertainty Machine, METAS UncLib, GUM Tree Calculator and similar). Their tools could be put through the bench, and they know where calculators go wrong.
+    3. Groups in national institutes and European projects that work on metrology for AI, machine learning and data: uncertainty of model outputs, trustworthy AI, digital calibration certificates and machine-readable units.
+    4. Committees and networks where such work is discussed: the relevant working groups of BIPM and CIPM, JCGM, IMEKO, EURAMET, ISO/IEC JTC 1/SC 42, and conferences on mathematics and software in metrology.
+    Not in scope for the first pass: general AI benchmark researchers with no tie to measurement, and vendors.
   - Every entry needs a source that was opened and read; no names from memory.
   - This is a list for the owner. Writing to anyone on it needs his "yes" each time, with the text shown to him in Russian first.
 
@@ -41,6 +47,10 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (17:40: scope of the metrologists list)
+
+- The owner left the choice of scope to the AI. Decided: four circles, closest to Measure first; written into tomorrow's task.
 
 ### 2026-11-24 (17:36: task for tomorrow)
 
