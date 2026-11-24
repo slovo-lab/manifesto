@@ -20,7 +20,7 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 - **Read `mcp-data-check`** (package index): a generic checker of servers against known answers. Decide whether Measure should use or credit it. (Not for the owner; for the next session.)
 
-- **Report the time and coordinates findings to the authors?** Candidates with a clear right answer: mcp-simple-timeserver (24 hours instead of 23), @theo.foobar/mcp-time (local time labelled `Z`), mcp-geo (length doubled; NaN for latitude 91; does not start with mcp 2.x), gis-mcp-server (length and distance 139 m apart; UTM zone of Bergen), mcp-server-proj (does not start with mcp 2.x). Drafts are not written yet. Each message needs his "yes" after he reads the text in Russian.
+- **Five reports wait for his "yes" after he reads the texts:** drafts in `measure/reports/2026-11-24-` `mcp-simple-timeserver`, `mcp-time`, `mcp-geo`, `gis-mcp-server`, `mcp-server-proj`. He said "yes, report" on 24 November at 17:00; the texts were shown to him in Russian. Send from his account through the browser once he confirms, then mark them as sent.
 
 ## Current state
 
@@ -28,10 +28,17 @@ This file is the lab's memory between working sessions. The AI does not remember
 - **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date. Not yet written up: the ten pairs added after the release (degrees of freedom, rounding, temperature differences, Type B for a normal distribution). A subject for the next post.
 - **Money trial (24 November):** run and written up in `measure/pilots/money/` (measure pull request 20). Verdict in `IDEAS.md`: not a project; ordinary questions all agree with references.
 - **Time and coordinates trials (24 November):** run and written up in `measure/pilots/time/` and `measure/pilots/coordinates/` (measure pull request 23). Summary and what follows from it: `IDEAS.md`, fifth round. Proposed next build: coordinates pairs in Measure, and a new kind of pair for questions with no answer or two answers (needs a `FORMAT.md` change). Environments used: `/home/claude/timeenv`, `/home/claude/geoenv` (workspace only, rebuild from the write-ups).
+- **Direction agreed by the owner (24 November, 17:00):** no second project for now; extend Measure with coordinates pairs (lengths, areas, conversions) and with a new kind of pair for questions that have no answer or two. Start with a proposal for the `FORMAT.md` change, then the first coordinates pairs, each from a source that was read (the Australian manual and a UTM zone definition have to be read first).
 - **Second project: none.** All five ideas on the original list are now settled: Measure is being built, the other four are dropped (Citation Check, Agent-Ready, Tested Skills, and Procedures; see the log). The lab's second line of work for now is contributions to tools that Measure shows to be incomplete. A new project goes on the list only after a prior-art search, and should grow out of the method that has worked here: reference questions with cited sources, put to tools independently. Candidates found by searching are kept in `IDEAS.md`; read it before proposing anything new.
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-24 (17:15: five reports drafted, voting idea searched, direction agreed)
+
+- The owner agreed to report the findings, agreed with the direction (extend Measure, no second project), and asked for the search on the voting idea.
+- Five issue pages checked in the browser; no duplicates. Five drafts written (measure pull request 24). The cause of the doubled length in mcp-geo was read in its installed source (`geo_mcp/units.py`, `geodesic_length`). The Norway rule for UTM zone 32 was confirmed by search (Lantmäteriet and others).
+- Voting idea: Moltbook and agent voting in decentralized organizations exist; a 2026 paper studies who controls a collective AI vote. Recorded in `IDEAS.md`. Not a project.
 
 ### 2026-11-24 (evening: time and coordinates trials)
 
