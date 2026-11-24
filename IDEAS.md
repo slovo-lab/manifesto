@@ -4,6 +4,32 @@
 
 Written by Claude (AI). Rule for this file: an idea is written here only after a search, with what the search found. Nothing here is a decision. First round: 24 November 2026, four searches.
 
+## Fourth round: first search on the owner's directions (24 November 2026, about 17:00)
+
+One or two searches per direction. Enough to rank them, not enough to decide.
+
+**Time (dates, time zones, time scales): stands; the best fit so far.**
+- Agents are given servers: the reference `mcp-server-time`, a 50-tool date and time server from BrainyCalc, `mcp-time-server-node`, and others.
+- Reference answers exist and are public: the IANA time zone database, IERS bulletins for leap seconds, ISO 8601 rules.
+- Prior art found is about models, not servers: Test of Time, MultiTempBench, SPAN, DateAugBench, date-math-bench all ask a language model to do date arithmetic. One server (`mcp-time-server-node`) has "external validation" tests of its own. No check that puts the same questions to several time servers was found.
+- Risk, the same as with money: most servers wrap sound libraries, and ordinary questions may all pass. The edges are where to look: clock changes, historical zone rules, month-end arithmetic, leap seconds, ambiguous input formats.
+
+**Positioning (coordinates, distances): stands, same risk.**
+- Servers: `mcp-server-proj`, `gis-mcp`, `gis-mcp-server`, geospatial-tools, geospatial-mcp (with military grid references). Most wrap pyproj.
+- References: Karney's test set of 500 000 geodesics on the WGS 84 ellipsoid and his test data for the transverse Mercator projection, both on Zenodo; reuse terms not read yet.
+- Likely edges: order of latitude and longitude, default ellipsoid, which datum shift is chosen silently. No cross-server check found.
+- Control of robots: not searched. Kept out for now: anything safety-related needs responsibility this lab cannot carry.
+
+**Finance with dates (day counts): possible addition to either, not searched for servers.**
+- Rules are published (2006 ISDA Definitions, section 4.16); ISDA published calculation examples for 30/360 and 30E/360 in 2008; open libraries carry test cases. Whether any finance server for agents offers day counts was not checked.
+
+**Energy: weakest fit for this method.**
+- The servers found are mostly lookups of live or tabulated data (grid carbon intensity, emission factors, prices), not calculators. A reference pair needs an answer fixed in advance; live data has none. What could be checked is whether quoted factors match their cited sources, and whether factors of different kinds are mixed (one server says openly that its figures for Great Britain use a different kind of factor from the rest). Needs a different method; not pursued now.
+
+**Prior art for the runner itself, found by accident:** `mcp-data-check` on the package index evaluates a server's accuracy against a file of known questions and answers. Not read yet. It does not change what Measure is (the cited reference pairs are the work, the runner is plumbing), but it must be read and, if it fits, used or credited.
+
+**Next step:** a one-day trial for time, built like the money trial: about fifteen questions with answers from the IANA database and from arithmetic, three or four servers, edges first. Then the same for coordinates. Both would be additions to Measure ("when" and "where" next to "how much"), not new repositories, unless a trial shows more.
+
 ## Third round: the money trial was run (24 November 2026, late afternoon)
 
 The trial promised below was run the same day. Write-up, script and full table: `measure/pilots/money/`.
