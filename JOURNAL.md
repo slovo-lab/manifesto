@@ -15,18 +15,26 @@ This file is the lab's memory between working sessions. The AI does not remember
 ## Needs the owner
 
 - **Confirm the two reports to ucon's authors.** Text is in `measure/reports/2026-11-24-ucon.md`: (1) `nmi` is read as nano-mile or nautical mile depending on the target unit; (2) the uncertainty of `x * x` differs from `x ** 2`. They would be opened as two issues at https://github.com/withtwoemms/ucon. Our fairness rule says failures are reported to the authors together with publication, and the results were published on 24 November, so this is the most pressing item.
-- **Create the release tag for Measure.** On https://github.com/slovo-lab/measure/releases choose "Draft a new release", tag `v0.1.0` on `main`, title "Measure 0.1.0". Suggested text is in the third paragraph of the log entry below.
-- **ISO 80000-1 clause number (low priority).** The dimensional-safety pair cites ISO 31-0:1992, clause 2.2.1, which is withdrawn. If you have access to ISO 80000-1, the clause there that says quantities can be added only if they are of the same kind would be a better citation (the 2022 contents list suggests 6.3, not checked).
+- **ISO 80000-1 clause number.** On 24 November the owner said he had dealt with this item but did not give the clause number in the session. Until the number is written here, the pair `dim-add-length-time` keeps citing ISO 31-0:1992, clause 2.2.1 (withdrawn). Needed: the clause of ISO 80000-1 (and its year) that says quantities can be added only if they are of the same kind.
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
 ## Current state
 
-- **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026 (merged to main; no tag yet, see above). 33 reference pairs, runner, adapters for Pint + uncertainties and ucon, `tools/make_results.py`, `RESULTS.md`, 54 tests. Results: Pint 0.26.2 + uncertainties 3.2.3 passed 29 of 29 pairs it has a function for; ucon 2.4.2 passed 26 of 27. Next steps are the unchecked items in `PLAN.md`: report to authors (needs the owner), pairs for degrees of freedom and reporting, automatic test runs, adapters for agent-facing servers.
-- **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date.
+- **Measure** (`slovo-lab/measure`): version 0.1.0 published on 24 November 2026; the owner created the tag `v0.1.0` and the GitHub release the same day. The tag has 33 reference pairs; main has 43 after ten more were added. Also on main: runner, adapters for Pint + uncertainties and ucon, `tools/make_results.py`, `RESULTS.md`, 64 tests. Results on 43 pairs: Pint 0.26.2 + uncertainties 3.2.3 passed 32 of 32 pairs it has a function for; ucon 2.4.2 passed 27 of 28. Next steps are the unchecked items in `PLAN.md`: report to authors (needs the owner), automatic test runs, adapters for agent-facing servers.
+- **Blog:** four posts, all dated 2026-11-24. That is the daily limit: no more posts on that date. Not yet written up: the ten pairs added after the release (degrees of freedom, rounding, temperature differences, Type B for a normal distribution). A subject for the next post.
 - **Second project:** Citation Check as a new citation checker is dropped under rule 5 (see the log). Open question for the next session: does an independent, cross-tool test of citation checkers against references with known answers already exist? If not, write the project statement for it (it needs a new repository from the owner). If it does, take the next idea from the parked list and run the same prior-art search first.
 - Agent-Ready, Procedures, Tested Skills: parked.
 
 ## Log
+
+### 2026-11-24 (ten more pairs, after the release)
+
+- This session was asked by the owner to do the "30 pairs" step and found, after researching sources, that the other session had already released 0.1.0 with 33 pairs. Nothing was overwritten. The owner was asked and chose to add the non-overlapping pairs here. Main was fetched again before the pull request and had not moved.
+- Measure pull request 9, merged: 10 new pairs (43 in all), tasks `effective_dof` and `round`, `type_b` for a normal distribution, results regenerated, 64 tests. No new failures. Neither tested library offers degrees of freedom, rounding to significant digits or Type B, so 7 of the 10 pairs are "not offered" for both; ucon also has no unit for a temperature difference that we could find in the package.
+- Sources read today for these pairs: NIST TN 1297 Appendix B.3 (equation B-1, and step 3 on truncating), sections 4.3 and 4.6, Table B.1; NIST SP 811 Appendix B.7.1 (three rounding rules and five worked examples, used to test the test helper), section 8.5, Table 5, and B.8 rows. Not found in TN 1297 section 7: a rule for how many digits to state an uncertainty with, so there is no pair for that yet.
+- Decision: the two Type B pairs for a normal distribution have a tolerance of 1e-4, because the divisors printed in the source (3 and 1.960) are rounded and a tool using the exact quantile must not fail for that.
+- Seen but not used: in ucon 2.4.2 the spelling `mph` is read as a unit of illuminance (milli-phot), not miles per hour. It is not a spelling our pairs use. Worth adding to the report for ucon's authors when it is next revised.
+- The owner created the tag `v0.1.0` and the release "Measure 0.1.0" (checked through the API). That item is removed from "Needs the owner".
 
 ### 2026-11-24 (afternoon session with the owner: first release, second project)
 
