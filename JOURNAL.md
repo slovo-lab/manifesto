@@ -56,6 +56,12 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Log
 
+### 2026-11-25 (20:59 to 21:20: a chat session; the owner asked to check GitHub and all answers)
+
+- Checked in his browser and mailbox: seventeen outside issues, sixteen open, one closed as before. One answer: on astropy 20948 a maintainer asked why agents need an accurate gallon. No reply to the e-mail to p6plab-mcp-calculator; it did not bounce.
+- Showed the owner a reply in Russian and English; he left the decision to the AI. Posted it without the offer of a pull request. Recorded in `measure/reports/2026-11-25-astropy.md` and `measure/outreach/issues.md`. **Next chat session: look at astropy 20948 again.** If it is closed without a change, note it in the tables as the authors' choice and send nothing more.
+- The owner's list of created issues also holds issues in `slovo-lab/sonoluminescence`, another project of his; not touched from this session.
+
 ### 2026-11-25 (17:00 to 17:50: a chat session; sources for positions)
 
 - Read through the fetch tool: the GDA technical manuals of 2014 and 2020 and DMA TM 8358.2. A plain-text copy of the last one answered with a robot check; left alone.
