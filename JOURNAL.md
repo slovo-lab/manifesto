@@ -17,7 +17,6 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 - **Outreach item 2: the owner's own post in his professional network.** Draft material is in `measure/outreach/2026-11-24-plan.ru.md`. Only he can post it. He may ask for the text to be fitted to a particular platform.
 - **Scheduled sessions cannot read the outside issues (seen 25 November).** With nobody present, web fetch of github.com waits for a permission that is never given, so the fourteen reports to authors go unread on every unattended run. Either read them in a chat session with the AI once or twice a week, or allow web fetch of github.com for the scheduled task, if the settings offer that. Until then the watch list says "not read", never "no answer".
-- **Look at the site once:** the post of 25 November 10:30 ("The first round is announced") should be listed on https://slovo-lab.github.io/ and https://slovo-lab.github.io/ru/. The scheduled session could not open the pages to confirm it (same permission problem as the item above); the build itself reported success.
 - **Optional review:** look over the first eleven pairs in `measure/pairs/pairs.json` and say whether the choice of sources (NIST SP 811, NIST TN 1297) and the tolerances look right to a metrologist.
 
 
@@ -44,6 +43,11 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-25 (10:50: two checks from the chat with the owner)
+
+- Site: both posts of 25 November are listed on https://slovo-lab.github.io/ (read through web fetch at 10:48). The item is removed from "Needs the owner".
+- Outside issues, read at 10:50 in one page: the owner's browser, signed in, at `https://github.com/issues/created` lists all fourteen with their state. State: thirteen open, one closed (mcp-gnu-units 2, as before). The list shows no comment counter on any of them, which on that page means no comments; the individual pages were not opened. This one page is the cheapest way to watch the issues, but it needs the owner's computer to be on, so it works only from a chat session.
 
 ### 2026-11-25 (10:23 to 10:45: scheduled session)
 
