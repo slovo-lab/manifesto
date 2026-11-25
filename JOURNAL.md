@@ -24,7 +24,9 @@ This file is the lab's memory between working sessions. The AI does not remember
 ## Current state
 
 - **Format version 2: proposed and understood by the runner (25 November, measure pull requests 35 and 36).** `measure/FORMAT.md` has the section; `tools/check_pairs.py` accepts versions 1 and 2; `bench/runner.py` judges `any_of`, `must_state` and relations, with the verdict `incomplete`; the Pint and ucon adapters report what their tool states. Four examples in `pairs/proposed-v2.json`; first trial in `docs/2026-11-25-v2-first-run.md`. Reports on version 1 pairs are unchanged, so the round of 1 December is not affected. **Do not report the "incomplete" on the calorie example to anyone:** whether a library that calls the unit "calorie" has said which calorie it means is an open question for the owner. Open questions are at the end of the section in `FORMAT.md`.
-- **More tools to test (25 November, measure pull request 37):** `measure/docs/2026-11-25-more-tools.md`. Seven libraries looked at by hand; two likely findings to confirm through the runner (quantities 0.17.0: `s * s` gives 0.0283 and `s ** 2` gives 0.04; js-quantities 1.8.0: US gallon 3.7854118 L against 3.785411784) and one library that does not import (unitpy 0.0.19). Plan step added: adapters for MetroloPy and quantities first. For the round of 4 January.
+- **New tools (25 November, measure pull requests 37 and 38):** two adapters written and run on the 43 pairs. **MetroloPy 1.1.1: 40 pass, 0 fail, 3 not offered** (rounding only). **quantities 0.17.0: 24 pass, 4 fail** (`s * s` gives 0.0283 for 0.04; three temperature conversions with no offset, for example 25 degC to K gives 25). Both wait for the round of 4 January (`WAITING_FOR_THE_NEXT_ROUND` in `measure/tools/round.py`); the round of 1 December keeps its eight announced tools. **Nothing reported: read quantities' documentation first** (next unchecked plan step); both behaviours may be stated limits. Tried by hand, to confirm through adapters: js-quantities (US gallon 3.7854118 L, pint 0.473176475 L), unit-converter-ai-mcp 1.0.11 (does not start with mcp 2.x; 1 lb = 0.453592 kg), mcp-units 0.3.3 from the package index (does not start), unitpy 0.0.19 (does not import). Full list: `measure/docs/2026-11-25-more-tools.md`. Environments (workspace only): `/tmp/cand` (libraries), `/home/claude/cand2` (servers), `/tmp/jsq` (Node).
+- **Neighbours checked (25 November):** `measure/docs/2026-11-25-neighbours.md`. Agent benchmarks, quality scores, "does it work" audits, test frameworks: none found that puts cited reference questions straight to the calculators. Every report should say in its first paragraph how Measure differs: no model in between, a cited reference for every answer.
+- **Decided for the owner, who left it to the AI (25 November): a bare unit name.** Six tools all read calorie, gallon, pint and ton the US way and none says so. The verdict stays `incomplete`; it is never reported to authors as a defect on its own; in a round it is shown summed over tools. Written in `measure/FORMAT.md`.
 - **What was decided about time, positions and money (asked by the owner on 25 November):** positions first, as new pairs in Measure, after the sources are read in full; time second, where the edge findings become version 2 questions (a time that occurs twice is `any_of`, a time that does not exist is `refuse`, the `Z` on a local time is `must_state`); money is not a field of its own, and only day counts and the two-answer rate of return may come later. None of the three is in the round of 1 December; the earliest is 4 January.
 
 - **Rounds: the day is confirmed by the owner (24 November, 19:14): the first working day of each month.** The first round is Tuesday 1 December 2026. He answered "agreed on rounds" to the whole proposal, which included counting 24 November as round 0.
@@ -48,6 +50,15 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-25 (12:45 to 13:45: a chat session; the fast road to new findings)
+
+- The owner chose adapters for new tools over coordinates pairs, left the calorie question to the AI, and asked for more tools and a check of competitors.
+- Adapters for MetroloPy and quantities, with tests (measure pull request 38, merged after both jobs passed). 161 tests locally, 9 skipped (GTC is not in this Python).
+- A test in `tests/test_round.py` required every adapter to be in the round. Changed: adapters may wait for the next round, and a new test fixes the December round at eight tools.
+- A first version of the quantities adapter asked the library for an attribute it does not have and 17 pairs came back as errors; fixed before anything was recorded.
+- Three searches on competitors and candidates; three more servers installed from the package index and looked at by hand.
+- Not done: no post for this afternoon (two of the day's four are used; the next scheduled run may write it). Coordinates pairs not started.
 
 ### 2026-11-25 (12:40 to 13:20: a chat session; runner for version 2, more tools)
 
