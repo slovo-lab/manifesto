@@ -23,6 +23,8 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Current state
 
+- **Format version 2 is proposed (25 November, measure pull request 35):** a section in `measure/FORMAT.md`, the checker accepts versions 1 and 2, four examples in `measure/pairs/proposed-v2.json`. New: `any_of` (several right answers, with `refusal_passes` and `stated_as`), `must_state` (labels an answer must carry), items of `"kind": "relation"` (calls, one feeding the next, and an `equal` relation with a source), the verdict `incomplete`, optional `reference_accuracy` and `sensitivity`. The published pairs stay at version 1; the runner and adapters do not understand version 2 yet. **Next unchecked step in `measure/PLAN.md`: teach the runner and the adapters version 2, without changing what the round of 1 December does.** Open questions are listed at the end of the section; the owner was shown the proposal in Russian in the chat and may answer them.
+
 - **Rounds: the day is confirmed by the owner (24 November, 19:14): the first working day of each month.** The first round is Tuesday 1 December 2026. He answered "agreed on rounds" to the whole proposal, which included counting 24 November as round 0.
 - **GTC added (24 November, evening):** `measure/bench/adapters/gtc_adapter.py`, GTC 1.5.1 from the package index, 13 of 13 pairs it has a function for, nothing to report to its authors. Eight tools now; 105 tests; `RESULTS.md`, both READMEs and the site's Measure page updated. Workspace environments (rebuild from `requirements-adapters.txt`): `/home/claude/gtcenv` holds all pinned tools, `/home/claude/gnu-env` holds mcp-gnu-units.
 - **The round of 1 December is announced (25 November, measure pull request 31):** `measure/rounds/2026-12/announcement.md` and `.ru.md`. Fixed in it: the 43 pairs at commit `cb2c68f` (full hash and the file's SHA-256 are in the announcement), the eight tools and where each is installed from, two kinds of check (installed and started; the pairs), one workaround known in advance (`mcp<2` for measurement-uncertainty-mcp). **Do not edit the announcement; a mistake in it gets a dated note at its end.** The script for the day is `measure/tools/round.py` (tests in `tests/test_round.py`): one empty environment per tool, one client environment with `mcp==1.30.0` for all servers, pairs read from the named commit with `git show`, output `install.md`, `install.json`, `results.json`. It refuses to install the two repository tools until their commits are named on the command line.
@@ -44,6 +46,13 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-25 (12:10 to 12:40: a chat session; format version 2 proposed)
+
+- The owner said to go on. Plan step done: the proposal for format version 2 with checker, examples and 16 tests (measure pull request 35, merged after both automatic jobs passed). 131 tests locally, 55 skipped for tools not installed in this Python.
+- One page read for an example: NIST SP 811, Appendix B.8, the two calorie rows (4.184 J and 4.1868 J, both exact), through the fetch tool's summary.
+- Decided: a new verdict, `incomplete`, for a right number with something unsaid; a wrong label is a failure. `refusal_passes` has no default. The two "how good is the reference" fields are recorded only; "digits lost" waits for the paper to be read in full.
+- Not done: nothing in version 2 can be run yet. No Russian version of `FORMAT.md` exists; the proposal was summarised for the owner in Russian in the chat.
 
 ### 2026-11-25 (11:20: NIST AI 800-2 read)
 
