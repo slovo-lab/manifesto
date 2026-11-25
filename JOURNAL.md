@@ -23,7 +23,9 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Current state
 
-- **Format version 2 is proposed (25 November, measure pull request 35):** a section in `measure/FORMAT.md`, the checker accepts versions 1 and 2, four examples in `measure/pairs/proposed-v2.json`. New: `any_of` (several right answers, with `refusal_passes` and `stated_as`), `must_state` (labels an answer must carry), items of `"kind": "relation"` (calls, one feeding the next, and an `equal` relation with a source), the verdict `incomplete`, optional `reference_accuracy` and `sensitivity`. The published pairs stay at version 1; the runner and adapters do not understand version 2 yet. **Next unchecked step in `measure/PLAN.md`: teach the runner and the adapters version 2, without changing what the round of 1 December does.** Open questions are listed at the end of the section; the owner was shown the proposal in Russian in the chat and may answer them.
+- **Format version 2: proposed and understood by the runner (25 November, measure pull requests 35 and 36).** `measure/FORMAT.md` has the section; `tools/check_pairs.py` accepts versions 1 and 2; `bench/runner.py` judges `any_of`, `must_state` and relations, with the verdict `incomplete`; the Pint and ucon adapters report what their tool states. Four examples in `pairs/proposed-v2.json`; first trial in `docs/2026-11-25-v2-first-run.md`. Reports on version 1 pairs are unchanged, so the round of 1 December is not affected. **Do not report the "incomplete" on the calorie example to anyone:** whether a library that calls the unit "calorie" has said which calorie it means is an open question for the owner. Open questions are at the end of the section in `FORMAT.md`.
+- **More tools to test (25 November, measure pull request 37):** `measure/docs/2026-11-25-more-tools.md`. Seven libraries looked at by hand; two likely findings to confirm through the runner (quantities 0.17.0: `s * s` gives 0.0283 and `s ** 2` gives 0.04; js-quantities 1.8.0: US gallon 3.7854118 L against 3.785411784) and one library that does not import (unitpy 0.0.19). Plan step added: adapters for MetroloPy and quantities first. For the round of 4 January.
+- **What was decided about time, positions and money (asked by the owner on 25 November):** positions first, as new pairs in Measure, after the sources are read in full; time second, where the edge findings become version 2 questions (a time that occurs twice is `any_of`, a time that does not exist is `refuse`, the `Z` on a local time is `must_state`); money is not a field of its own, and only day counts and the two-answer rate of return may come later. None of the three is in the round of 1 December; the earliest is 4 January.
 
 - **Rounds: the day is confirmed by the owner (24 November, 19:14): the first working day of each month.** The first round is Tuesday 1 December 2026. He answered "agreed on rounds" to the whole proposal, which included counting 24 November as round 0.
 - **GTC added (24 November, evening):** `measure/bench/adapters/gtc_adapter.py`, GTC 1.5.1 from the package index, 13 of 13 pairs it has a function for, nothing to report to its authors. Eight tools now; 105 tests; `RESULTS.md`, both READMEs and the site's Measure page updated. Workspace environments (rebuild from `requirements-adapters.txt`): `/home/claude/gtcenv` holds all pinned tools, `/home/claude/gnu-env` holds mcp-gnu-units.
@@ -46,6 +48,13 @@ This file is the lab's memory between working sessions. The AI does not remember
 - Agent-Ready and Tested Skills: dropped under rule 5 (see the log).
 
 ## Log
+
+### 2026-11-25 (12:40 to 13:20: a chat session; runner for version 2, more tools)
+
+- Runner and two adapters taught version 2 (measure pull request 36, merged after both jobs passed): 150 tests locally, 9 skipped. Version 1 reports are the same as before (Pint 32 pass; ucon 27 pass, 1 fail).
+- First trial of the four examples on six tools. The relation `rel-square-two-ways` fails on ucon, as issue 396 there says it should. A first version of the ucon adapter reported the unit as `<UnitProduct mm>`; that was the adapter's fault and was corrected before publishing.
+- The owner asked whether there is anyone else to test. Package indexes asked for 40 names, two searches, seven libraries tried by hand. Written up with a Russian version (measure pull request 37).
+- Not done: adapters for the five servers and GTC do not report what the tool states; no adapter for any of the new tools.
 
 ### 2026-11-25 (12:10 to 12:40: a chat session; format version 2 proposed)
 
