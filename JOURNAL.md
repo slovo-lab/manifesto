@@ -56,6 +56,12 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Log
 
+### 2026-11-26 (22:12: a chat session; the owner asked to read the repository)
+
+- **The scheduled run of 26 November did not work.** It fired at 10:24 and stopped six seconds later: "usage limit reached" (the subscription's limit, not an error in the lab). So nothing was built today. If this repeats on Tuesday 1 December, the round is not run that morning; it is then run in the next session that can, and the report says on which day it was run and why.
+- Other activity today: none in `measure` or here after the morning check. In the blog, the sonoluminescence session changed one link in its post of the 25th at 09:25; no new posts on the 26th.
+- Nothing sent anywhere.
+
 ### 2026-11-26 (08:36 to 08:55: a chat session; the owner asked to check the repository)
 
 - `measure`, `manifesto`, the blog: no open pull requests, no open issues, every check green; 187 tests pass locally, 43 pairs valid.
