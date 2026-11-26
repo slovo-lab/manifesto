@@ -56,6 +56,13 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Log
 
+### 2026-11-26 (08:36 to 08:55: a chat session; the owner asked to check the repository)
+
+- `measure`, `manifesto`, the blog: no open pull requests, no open issues, every check green; 181 tests pass locally, 43 pairs valid.
+- Outside issues: seventeen, one closed (mcp-gnu-units 2, as before). **astropy 20948: the maintainer kept it open as a valid but low-priority bug** and liked the reply. Nothing more to send there. No other answers; no answer to the e-mail.
+- **The blog had five posts dated 25 November**, one over the limit. The fifth, "A bubble that turns sound into light..." (17:40, sonoluminescence), was pushed straight to the blog's main branch by another session at 17:50 and corrected at 19:35; the four Measure posts were all published before it. Not changed from here: the owner was told and decides. Until he does, sessions count that post against 26 November, so **at most three more posts today**.
+- Two sessions, this one and the sonoluminescence one, now write to the same blog. The one-session rule above is about `measure`; for the blog the shared limit is what needs agreeing.
+
 ### 2026-11-25 (20:59 to 21:20: a chat session; the owner asked to check GitHub and all answers)
 
 - Checked in his browser and mailbox: seventeen outside issues, sixteen open, one closed as before. One answer: on astropy 20948 a maintainer asked why agents need an accurate gallon. No reply to the e-mail to p6plab-mcp-calculator; it did not bounce.
