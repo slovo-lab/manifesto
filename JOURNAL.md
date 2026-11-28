@@ -61,6 +61,12 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Log
 
+### 2026-11-28 (18:22 to 19:10: a chat session; the census)
+
+- The owner asked why only 17 tools; then said yes to a census. `measure/docs/2026-11-28-census.md` (+ `.ru.md`, measure pull request 59). npm (ten searches), PyPI (all 951 882 names, then summaries) and the official MCP registry (through the fetch tool; the shell cannot reach it). Eleven npm servers installed without install scripts in `/tmp/cen_npm` and asked three control questions; eight start. About 8 servers and 15 libraries are worth adding (bench to about 40); order written as a plan step, after the round.
+- Two first looks, not findings yet: allunits-mcp rounds every answer to 6 decimals by default; stem-calc-student-mcp gives 1 lb = 0.453592 kg.
+- **quantity-guard** (PyPI, built on Pint) checks units, datums and time zones at the tool boundary and reports a benchmark of 4 288 agent runs: the nearest neighbour so far, and a person to tell about Measure if the owner agrees.
+
 ### 2026-11-28 (Saturday, 17:48 to 18:45: a chat session; the owner asked to start extending the tests now)
 
 - **The owner agreed the order: (1) a sweep of exactly defined units, (2) self-consistency questions, (3) positions.** Written into `measure/PLAN.md`.
