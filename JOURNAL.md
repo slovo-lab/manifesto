@@ -59,6 +59,12 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Log
 
+### 2026-11-28 (Saturday, 17:35 to 18:00: a chat session; the owner asked to check)
+
+- Both scheduled runs worked on Opus 5.5 (26 November evening, 27 November morning); their work is merged. Both blog index pages were read in the owner's browser: the posts of 26 and 27 November are listed in both languages, as the two runs asked.
+- **First fix because of a Measure report:** mcp-simple-timeserver 12 was fixed and closed by its author (real elapsed time across a clock change). **convert-units 375 has a fix pull request from someone else** (376, open). **js-quantities 153: a contributor asked how we would fix it**; reply drafted in `measure/reports/2026-11-25-js-quantities.md`, waiting for the owner's yes; a pull request there would need a second yes. astropy 20948 unchanged. Details in `measure/outreach/issues.md`.
+- Nothing sent. The round is on Tuesday 1 December; the scheduled run on Monday 30 November is the last before it.
+
 ### 2026-11-27 (Friday: week in review, written in Russian for the owner)
 
 **Неделя 24–27 ноября.**
