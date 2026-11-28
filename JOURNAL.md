@@ -13,6 +13,8 @@ This file is the lab's memory between working sessions. The AI does not remember
 - **Version tags and GitHub releases:** the AI's sessions cannot create them (refused on 24 November 2026). Ask the owner.
 - **One working session at a time.** On 24 November 2026 two sessions worked on `measure` at once and both wrote a runner and adapters. Before starting work, fetch the main branches and read this journal; before opening a pull request, fetch main again and rebuild on top of it if it moved. If another session's branch or fresh merge covers the same step, stop and build on it. Never overwrite it.
 
+- **December plan (agreed by the owner on 28 November):** dated entries in the calendar of `measure/PLAN.md` (Russian: `measure/docs/2026-12-plan.ru.md`). Round on 1 December, report by 4 December, self-consistency in the week of 7 December, positions in the week of 14 December, sweep and format version 2 into the pairs 21 to 24 December, January announcement by 29 December, eight-week check on 19 January. On 30 November nothing in `bench/`, `pairs/` or `tools/` changes.
+
 ## Needs the owner
 
 - **Site check from a chat session:** scheduled sessions cannot read the published pages (26 and 27 November). Someone should look once at https://slovo-lab.github.io/ and /ru/ to confirm the posts of 26 and 27 November are listed.
