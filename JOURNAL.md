@@ -59,6 +59,14 @@ This file is the lab's memory between working sessions. The AI does not remember
 
 ## Log
 
+### 2026-11-28 (Saturday, 17:48 to 18:45: a chat session; the owner asked to start extending the tests now)
+
+- **The owner agreed the order: (1) a sweep of exactly defined units, (2) self-consistency questions, (3) positions.** Written into `measure/PLAN.md`.
+- (1) done for nine libraries (measure pull request 56): `measure/sweeps/definitions/`. 57 reference units from NIST SP 811 B.8 and Handbook 44 (2026) C, all agreeing with NIST's printed factors (a test keeps it so). Pint and quantities exact on all 57; unyt exact on its 37. New findings read in the libraries' code: astropy (pound-force through a rounded slug, 1.4e-8; horsepower documented as electrical with the mechanical value), ucon (horsepower 745.7 W; troy ounce 31.1035 g), mathjs (psi and horsepower rounded in the 11th digit), js-quantities (pound-force, psi, ounce, horsepower, knot, bushel). Not faults: mathjs's metric teaspoon and tablespoon (a self-consistency question: its cup is not 16 tablespoons), convert-units's `t` meaning the short ton (documented), `ct` read as centitonne.
+- **Four reports prepared, none sent:** `measure/reports/2026-11-28-definitions-sweep.md` (new issues for astropy, ucon and mathjs; a comment on js-quantities 153). The owner was shown the list; each waits for his yes.
+- Not done: GNU units (the `units` program is not installed in this workspace), wider name lists, the servers.
+- Round of 1 December unchanged.
+
 ### 2026-11-28 (Saturday, 17:35 to 18:00: a chat session; the owner asked to check)
 
 - Both scheduled runs worked on Opus 5.5 (26 November evening, 27 November morning); their work is merged. Both blog index pages were read in the owner's browser: the posts of 26 and 27 November are listed in both languages, as the two runs asked.
